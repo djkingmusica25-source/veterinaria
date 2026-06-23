@@ -3,60 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinaria La Hacienda</title>
+    <title>Veterinaria La Hacienda | Cuidado Profesional</title>
     <style>
-        :root { --primary: #1a4d2e; --light: #f9f9f9; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        :root { --primary: #1a4d2e; --secondary: #e8eddf; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; color: #333; }
         
-        /* Hero Section */
+        header { background: white; padding: 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        .logo { max-width: 300px; }
+        
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg'); 
-            background-size: cover; background-position: center; height: 80vh; color: white; 
-            display: flex; flex-direction: column; justify-content: center; padding: 20px; text-align: left;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg'); 
+            background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; 
         }
         
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         
-        /* Grid de Servicios */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { padding: 30px; border: 1px solid #ddd; border-radius: 15px; transition: 0.3s; }
-        .card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        
-        button { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
 
-    <!-- Hero -->
-    <header class="hero">
-        <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo" style="width: 200px;">
-        <h1>Cuidado veterinario<br>con cariño, técnica y confianza.</h1>
-        <p>Atención especializada para el bienestar de tu mascota.</p>
-        <button onclick="window.location.href='tel:+573122388458'">Agendar consulta</button>
+    <header>
+        <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo La Hacienda" class="logo">
     </header>
 
-    <!-- Sección Servicios -->
-    <div class="container">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>Atención humanizada</h3>
-                <p>Escuchamos, observamos y explicamos todo de forma clara.</p>
-            </div>
-            <div class="card">
-                <h3>Estructura y exámenes</h3>
-                <p>Evaluación clínica precisa para diagnósticos acertados.</p>
-            </div>
-            <div class="card">
-                <h3>Vacunas y prevención</h3>
-                <p>Orientación personalizada para cada etapa de vida.</p>
-            </div>
-            <div class="card">
-                <h3>Cirugías y procedimientos</h3>
-                <p>Protocolos seguros con seguimiento post-operatorio.</p>
-            </div>
+    <section class="hero">
+        <h1>VETERINARIA LA HACIENDA</h1>
+        <p>Cuidando con amor y profesionalismo a tu mascota.</p>
+        <a href="tel:3122388458" style="background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px;">¡Programar una cita!</a>
+    </section>
+
+    <section class="section">
+        <h2>Nuestro Equipo en Acción</h2>
+        <div class="gallery">
+            <img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg" alt="Equipo">
+            <img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg" alt="Atención médica">
+            <img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg" alt="Examen auditivo">
+            <img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg" alt="Consulta felina">
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>Calle 5ta # 20-62, Aguachica, Cesar, Colombia | 312 238 8458</p>
+        <p>&copy; 2026 Veterinaria La Hacienda. ¡Gracias por preferir nuestros servicios!</p>
+    </footer>
 
 </body>
 </html>
