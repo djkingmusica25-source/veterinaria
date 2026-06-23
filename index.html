@@ -7,46 +7,75 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;color:#333;background:#fff;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:#333;background:#fff;overflow-x:hidden;line-height:1.6}
 .hero{
 min-height:100vh;
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
 url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;background-position:center;
 display:flex;align-items:center
 }
 .hero-content{max-width:1200px;margin:auto;padding:40px;color:#fff}
 .hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;margin-bottom:20px}
-.hero p{max-width:650px;font-size:1.1rem;margin-bottom:25px}
-.btn{display:inline-block;background:#ff6b57;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:600}
+.hero p{max-width:700px;font-size:1.1rem;margin-bottom:25px}
+.hero-badges{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-badges span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);padding:8px 14px;border-radius:999px;font-weight:600;backdrop-filter:blur(8px)}
+.btn{display:inline-block;background:#ff6b57;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:600;border:0;transition:.2s ease}
+.btn:hover{background:#e95745;transform:translateY(-2px)}
 
 .services{padding:80px 20px}
 .container{max-width:1200px;margin:auto}
+.section-title{text-align:center;font-size:clamp(2rem,4vw,2.7rem);margin-bottom:12px;color:#123524}
+.section-lead{text-align:center;max-width:720px;margin:0 auto 38px;color:#5f6b65}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
-.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
-.card h3{margin:15px 0}
+.card{background:#fff;padding:30px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
+.card h3{margin:15px 0;color:#123524}
+
+.schedule{padding:75px 20px;background:#f4fbf7}
+.schedule-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+.schedule-item{background:#fff;border-radius:16px;padding:24px;border:1px solid #dcefe4;box-shadow:0 10px 24px rgba(18,53,36,.06)}
+.schedule-item strong{display:block;color:#123524;font-size:1.05rem;margin-bottom:6px}
 
 .split{display:grid;grid-template-columns:1fr 1fr}
-.split img{width:100%;height:100%;object-fit:cover}
+.split img{width:100%;height:100%;object-fit:cover;min-height:460px}
 .info{background:#8fd6ea;padding:60px;display:flex;flex-direction:column;justify-content:center}
-.info h2{font-size:2.5rem;margin-bottom:20px}
+.info h2{font-size:2.5rem;margin-bottom:20px;color:#123524}
+.info ul{margin:20px 0 0 20px}
+.info li{margin-bottom:8px}
 
 .team{padding:90px 20px;text-align:center}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}
-.member{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.member{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08)}
 .member img{width:100%;height:320px;object-fit:cover}
-.member h4{padding:15px}
+.member h4{padding:15px;color:#123524}
 
 .gallery{padding:80px 20px;background:#f8fafc}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .gallery-grid img{width:100%;height:280px;object-fit:cover;border-radius:18px}
 
+.contact{padding:85px 20px;background:#fff}
+.contact-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.contact-panel{background:#123524;color:#fff;border-radius:18px;padding:34px;display:flex;flex-direction:column;justify-content:center}
+.contact-panel h2{font-size:2.4rem;line-height:1.1;margin-bottom:18px}
+.contact-list{list-style:none;margin-top:22px}
+.contact-list li{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.contact-list strong{display:block;color:#8fd6ea;margin-bottom:3px}
+.contact-list a{color:#fff;text-decoration:none}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.contact-actions .btn.secondary{background:#fff;color:#123524}
+.map{min-height:440px;border:0;border-radius:18px;width:100%;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+
 footer{background:#123524;color:#fff;text-align:center;padding:50px 20px}
+footer a{color:#8fd6ea;text-decoration:none}
 
 @media(max-width:900px){
-.grid,.team-grid,.split{grid-template-columns:1fr}
+.grid,.team-grid,.split,.schedule-grid,.contact-layout{grid-template-columns:1fr}
 .hero{text-align:center}
+.hero-badges{justify-content:center}
 .info{padding:40px 25px}
+.contact-panel h2{font-size:2rem}
+.map{min-height:360px}
 }
 </style>
 </head>
@@ -55,51 +84,100 @@ footer{background:#123524;color:#fff;text-align:center;padding:50px 20px}
 <section class="hero">
 <div class="hero-content">
 <h1>Cuidando a tus mascotas con pasión y experiencia</h1>
-<p>Veterinaria La Hacienda ofrece atención médica integral, diagnósticos avanzados y un equipo comprometido con el bienestar de cada mascota.</p>
-<a href="#servicios" class="btn">Conoce más</a>
+<p>Veterinaria La Hacienda ofrece atención médica integral, diagnósticos confiables y más de 10 años de servicio comprometidos con el bienestar de cada mascota.</p>
+<div class="hero-badges">
+<span>Urgencias 24 horas</span>
+<span>Atención en Aguachica</span>
+<span>Medicina preventiva</span>
+</div>
+<a href="#contacto" class="btn">Agenda tu consulta</a>
+</div>
+
+</section>
+<section class="gallery" id="galeria">
+<div class="container">
+<h2 class="section-title">Equipo de expertos</h2>
+<p class="section-lead">Un espacio listo para mostrar las fotos de pacientes, instalaciones y momentos especiales de la veterinaria.</p>
+<div class="gallery-grid">
+<img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg" alt="Galería veterinaria 1">
+<img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg" alt="Galería veterinaria 2">
+<img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg" alt="Galería veterinaria 3">
+<img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg" alt="Galería veterinaria 4">
+</div>
 </div>
 </section>
 
 <section class="services" id="servicios">
 <div class="container">
+<h2 class="section-title">Servicios veterinarios</h2>
+<p class="section-lead">Acompañamos a tu mascota con atención cercana, revisión profesional y orientación clara para cada etapa de su vida.</p>
 <div class="grid">
-<div class="card"><h3>Diagnóstico Completo</h3><p>Equipos modernos para una evaluación precisa.</p></div>
-<div class="card"><h3>Atención 24/7</h3><p>Disponibilidad para emergencias y consultas.</p></div>
-<div class="card"><h3>Especialistas</h3><p>Profesionales con amplia experiencia clínica.</p></div>
-<div class="card"><h3>Cuidado Preventivo</h3><p>Vacunación, controles y bienestar animal.</p></div>
+<div class="card"><h3>Diagnóstico completo</h3><p>Evaluación clínica para conocer el estado de salud de tu mascota.</p></div>
+<div class="card"><h3>Atención 24/7</h3><p>Disponibilidad para urgencias veterinarias cuando más lo necesitas.</p></div>
+<div class="card"><h3>Especialistas</h3><p>Profesionales con experiencia clínica y trato humano.</p></div>
+<div class="card"><h3>Cuidado preventivo</h3><p>Vacunación, controles, desparasitación y bienestar animal.</p></div>
 </div>
 </div>
 </section>
 
+
+
 <section class="split">
-<img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop" alt="Mascota">
+<img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop" alt="Perro recibiendo cuidado veterinario">
 <div class="info">
 <h2>¿Por qué elegirnos?</h2>
 <p>Brindamos una atención cercana, tecnología veterinaria moderna y un equipo humano comprometido con la salud de tus mascotas.</p>
-<a href="#" class="btn" style="margin-top:20px;width:max-content;">Leer más</a>
+<ul>
+<li>Más de 10 años de servicio veterinario.</li>
+<li>Atención para consultas, controles y urgencias.</li>
+<li>Ubicación fácil de encontrar en Aguachica, Cesar.</li>
+</ul>
+<a href="#contacto" class="btn" style="margin-top:24px;width:max-content;">Contactar ahora</a>
 </div>
 </section>
 
 
-<div>
 
-</div>
-<section class="gallery">
+<section class="schedule" id="horarios">
 <div class="container">
-<h2 style="text-align:center;margin-bottom:30px;">Galería</h2>
-<div class="gallery-grid">
-<img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg">
-<img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg">
-<img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg">
-<img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg">
+<h2 class="section-title">Horarios de atención</h2>
+<p class="section-lead">Visítanos en nuestros horarios habituales o comunícate con nosotros para urgencias las 24 horas.</p>
+<div class="schedule-grid">
+<div class="schedule-item"><strong>Lunes a viernes</strong><span>8:00 a.m. - 8:00 p.m.</span></div>
+<div class="schedule-item"><strong>Sábados</strong><span>9:00 a.m. - 6:00 p.m.</span></div>
+<div class="schedule-item"><strong>Domingos</strong><span>10:00 a.m. - 2:00 p.m.</span></div>
+<div class="schedule-item"><strong>Urgencias</strong><span>Atención 24 horas</span></div>
 </div>
+</div>
+</section>
+
+
+
+<section class="contact" id="contacto">
+<div class="container contact-layout">
+<div class="contact-panel">
+<h2>Información de contacto</h2>
+<p>Estamos listos para atender a tu mascota con cariño, experiencia y respuesta rápida.</p>
+<ul class="contact-list">
+<li><strong>Teléfono</strong><a href="tel:+573122388458">312 238 8458</a></li>
+<li><strong>Correo</strong><a href="mailto:lahaciendaveterinaria@gmail.com">lahaciendaveterinaria@gmail.com</a></li>
+<li><strong>Ubicación</strong>Calle 5ta # 20-62, Aguachica, Cesar, Colombia</li>
+<li><strong>Horarios</strong>Lun-vie 8am-8pm, sáb 9am-6pm, dom 10am-2pm. Urgencias 24h.</li>
+</ul>
+<div class="contact-actions">
+<a class="btn" href="tel:+573122388458">Llamar</a>
+<a class="btn secondary" href="mailto:lahaciendaveterinaria@gmail.com">Enviar correo</a>
+</div>
+</div>
+<iframe class="map" title="Mapa de Veterinaria La Hacienda" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle%205ta%20%23%2020-62%2C%20Aguachica%2C%20Cesar%2C%20Colombia&output=embed"></iframe>
 </div>
 </section>
 
 <footer>
 <h2>Veterinaria La Hacienda</h2>
 <p>Comprometidos con la salud y felicidad de tus mascotas.</p>
+<p>Tel: <a href="tel:+573122388458">312 238 8458</a> | <a href="mailto:lahaciendaveterinaria@gmail.com">lahaciendaveterinaria@gmail.com</a></p>
 </footer>
 
 </body>
-</html>>>
+</html>
