@@ -2,34 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria La Hacienda</title>
     <style>
-        :root { --primary: #1a4d2e; --accent: #e8eddf; }
-        body { font-family: sans-serif; text-align: center; color: #333; }
-        .logo { max-width: 200px; margin: 20px 0; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; }
-        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-        .footer { background: var(--primary); color: white; padding: 40px; }
+        :root {
+            --primary: #1a4d2e;
+            --accent: #e8eddf;
+        }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        header { padding: 40px; text-align: center; background: #fff; }
+        .logo { max-width: 350px; height: auto; }
+        
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        h2 { text-align: center; color: var(--primary); margin-bottom: 30px; }
+        
+        /* Galería optimizada */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover { transform: scale(1.02); }
+
+        footer { text-align: center; padding: 50px; background: var(--primary); color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <img src="https://i.ibb.co/6P07p51/photo-6-2026-06-23-17-00-20-2.jpg" alt="Logo" class="logo">
-    
-    <h2>Nuestro Equipo y Servicios</h2>
-    <div class="gallery">
-        <img src="https://i.ibb.co/3kXyJ5b/photo-1-2026-06-23-17-00-20.jpg" alt="Equipo">
-        <img src="https://i.ibb.co/F8S7g9x/photo-2-2026-06-23-17-00-20.jpg" alt="Servicio">
-        <img src="https://i.ibb.co/bN1mK2s/photo-3-2026-06-23-17-00-20.jpg" alt="Consulta">
-        <img src="https://i.ibb.co/L9vC8z4/photo-4-2026-06-23-17-00-20.jpg" alt="Equipo">
-        <img src="https://i.ibb.co/m2P4w6r/photo-5-2026-06-23-17-00-20.jpg" alt="Examen">
-        <img src="https://i.ibb.co/q8W5x9z/photo-7-2026-06-23-17-00-20.jpg" alt="Consulta">
-    </div>
+<header>
+    <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo La Hacienda" class="logo">
+</header>
 
-    <footer class="footer">
-        <h2>¡Gracias por elegirnos!</h2>
-        <p>Agradecemos profundamente que prefiera nuestros servicios para el cuidado y bienestar de su mascota.</p>
-    </footer>
+<div class="container">
+    <h2>Nuestro Equipo en Acción</h2>
+    <div class="gallery">
+        <img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg" alt="Examen clínico">
+        <img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg" alt="Equipo médico">
+        <img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg" alt="Consulta especializada">
+        <img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg" alt="Consulta felina">
+    </div>
+</div>
+
+<footer>
+    <h2>¡Gracias por elegirnos!</h2>
+    <p>En Veterinaria La Hacienda, agradecemos que confíe en nuestros servicios profesionales para el cuidado de su mascota.</p>
+</footer>
 
 </body>
 </html>
