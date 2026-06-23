@@ -1,54 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinaria La Hacienda | Cuidado Profesional</title>
-    <style>
-        :root { --primary: #1a4d2e; --secondary: #e8eddf; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; color: #333; }
-        
-        header { background: white; padding: 20px; text-align: center; border-bottom: 3px solid var(--primary); }
-        .logo { max-width: 300px; }
-        
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg'); 
-            background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; 
-        }
-        
-        .section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        
-        footer { background: var(--primary); color: white; text-align: center; padding: 30px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veterinaria La Hacienda</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;color:#333;background:#fff;overflow-x:hidden}
+.hero{
+min-height:100vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;background-position:center;
+display:flex;align-items:center
+}
+.hero-content{max-width:1200px;margin:auto;padding:40px;color:#fff}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.1;margin-bottom:20px}
+.hero p{max-width:650px;font-size:1.1rem;margin-bottom:25px}
+.btn{display:inline-block;background:#ff6b57;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:600}
+
+.services{padding:80px 20px}
+.container{max-width:1200px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
+.card h3{margin:15px 0}
+
+.split{display:grid;grid-template-columns:1fr 1fr}
+.split img{width:100%;height:100%;object-fit:cover}
+.info{background:#8fd6ea;padding:60px;display:flex;flex-direction:column;justify-content:center}
+.info h2{font-size:2.5rem;margin-bottom:20px}
+
+.team{padding:90px 20px;text-align:center}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}
+.member{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.member img{width:100%;height:320px;object-fit:cover}
+.member h4{padding:15px}
+
+.gallery{padding:80px 20px;background:#f8fafc}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery-grid img{width:100%;height:280px;object-fit:cover;border-radius:18px}
+
+footer{background:#123524;color:#fff;text-align:center;padding:50px 20px}
+
+@media(max-width:900px){
+.grid,.team-grid,.split{grid-template-columns:1fr}
+.hero{text-align:center}
+.info{padding:40px 25px}
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo La Hacienda" class="logo">
-    </header>
+<section class="hero">
+<div class="hero-content">
+<h1>Cuidando a tus mascotas con pasión y experiencia</h1>
+<p>Veterinaria La Hacienda ofrece atención médica integral, diagnósticos avanzados y un equipo comprometido con el bienestar de cada mascota.</p>
+<a href="#servicios" class="btn">Conoce más</a>
+</div>
+</section>
 
-    <section class="hero">
-        <h1>VETERINARIA LA HACIENDA</h1>
-        <p>Cuidando con amor y profesionalismo a tu mascota.</p>
-        <a href="tel:3122388458" style="background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px;">¡Programar una cita!</a>
-    </section>
+<section class="services" id="servicios">
+<div class="container">
+<div class="grid">
+<div class="card"><h3>Diagnóstico Completo</h3><p>Equipos modernos para una evaluación precisa.</p></div>
+<div class="card"><h3>Atención 24/7</h3><p>Disponibilidad para emergencias y consultas.</p></div>
+<div class="card"><h3>Especialistas</h3><p>Profesionales con amplia experiencia clínica.</p></div>
+<div class="card"><h3>Cuidado Preventivo</h3><p>Vacunación, controles y bienestar animal.</p></div>
+</div>
+</div>
+</section>
 
-    <section class="section">
-        <h2>Nuestro Equipo en Acción</h2>
-        <div class="gallery">
-            <img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg" alt="Equipo">
-            <img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg" alt="Atención médica">
-            <img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg" alt="Examen auditivo">
-            <img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg" alt="Consulta felina">
-        </div>
-    </section>
+<section class="split">
+<img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop" alt="Mascota">
+<div class="info">
+<h2>¿Por qué elegirnos?</h2>
+<p>Brindamos una atención cercana, tecnología veterinaria moderna y un equipo humano comprometido con la salud de tus mascotas.</p>
+<a href="#" class="btn" style="margin-top:20px;width:max-content;">Leer más</a>
+</div>
+</section>
 
-    <footer>
-        <p>Calle 5ta # 20-62, Aguachica, Cesar, Colombia | 312 238 8458</p>
-        <p>&copy; 2026 Veterinaria La Hacienda. ¡Gracias por preferir nuestros servicios!</p>
-    </footer>
+<section class="team">
+<div class="container">
+<h2>Equipo de Expertos</h2>
+<p>Profesionales preparados para cuidar a tu mejor amigo.</p>
+<div class="team-grid">
+<div class="member"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=900&auto=format&fit=crop"><h4>Dra. María Gómez</h4></div>
+<div class="member"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=900&auto=format&fit=crop"><h4>Dr. Carlos Ruiz</h4></div>
+<div class="member"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=900&auto=format&fit=crop"><h4>Dra. Ana Torres</h4></div>
+</div>
+</div>
+</section>
+
+<section class="gallery">
+<div class="container">
+<h2 style="text-align:center;margin-bottom:30px;">Galería</h2>
+<div class="gallery-grid">
+<img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg">
+<img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg">
+<img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg">
+<img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg">
+</div>
+</div>
+</section>
+
+<footer>
+<h2>Veterinaria La Hacienda</h2>
+<p>Comprometidos con la salud y felicidad de tus mascotas.</p>
+</footer>
 
 </body>
-</html>
+</html>>
