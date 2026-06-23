@@ -5,56 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria La Hacienda</title>
     <style>
-        :root {
-            --primary: #1a4d2e;
-            --accent: #e8eddf;
-        }
+        :root { --primary: #1a4d2e; --light: #f9f9f9; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        header { padding: 40px; text-align: center; background: #fff; }
-        .logo { max-width: 350px; height: auto; }
         
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        h2 { text-align: center; color: var(--primary); margin-bottom: 30px; }
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg'); 
+            background-size: cover; background-position: center; height: 80vh; color: white; 
+            display: flex; flex-direction: column; justify-content: center; padding: 20px; text-align: left;
+        }
         
-        /* Galería optimizada */
-        .gallery { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
-        }
-        .gallery img { 
-            width: 100%; 
-            height: 300px; 
-            object-fit: cover; 
-            border-radius: 12px; 
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover { transform: scale(1.02); }
-
-        footer { text-align: center; padding: 50px; background: var(--primary); color: white; margin-top: 50px; }
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        
+        /* Grid de Servicios */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { padding: 30px; border: 1px solid #ddd; border-radius: 15px; transition: 0.3s; }
+        .card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        button { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo La Hacienda" class="logo">
-</header>
+    <!-- Hero -->
+    <header class="hero">
+        <img src="https://i.ibb.co/QjD8SFMy/photo-6-2026-06-23-17-00-20.jpg" alt="Logo" style="width: 200px;">
+        <h1>Cuidado veterinario<br>con cariño, técnica y confianza.</h1>
+        <p>Atención especializada para el bienestar de tu mascota.</p>
+        <button onclick="window.location.href='tel:+573122388458'">Agendar consulta</button>
+    </header>
 
-<div class="container">
-    <h2>Nuestro Equipo en Acción</h2>
-    <div class="gallery">
-        <img src="https://i.ibb.co/b5DC0ctC/photo-1-2026-06-23-17-00-20.jpg" alt="Examen clínico">
-        <img src="https://i.ibb.co/fVyP1swj/photo-4-2026-06-23-17-00-20.jpg" alt="Equipo médico">
-        <img src="https://i.ibb.co/k2BKKJ1f/photo-5-2026-06-23-17-00-20.jpg" alt="Consulta especializada">
-        <img src="https://i.ibb.co/q3HGNYkc/photo-7-2026-06-23-17-00-20.jpg" alt="Consulta felina">
+    <!-- Sección Servicios -->
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Atención humanizada</h3>
+                <p>Escuchamos, observamos y explicamos todo de forma clara.</p>
+            </div>
+            <div class="card">
+                <h3>Estructura y exámenes</h3>
+                <p>Evaluación clínica precisa para diagnósticos acertados.</p>
+            </div>
+            <div class="card">
+                <h3>Vacunas y prevención</h3>
+                <p>Orientación personalizada para cada etapa de vida.</p>
+            </div>
+            <div class="card">
+                <h3>Cirugías y procedimientos</h3>
+                <p>Protocolos seguros con seguimiento post-operatorio.</p>
+            </div>
+        </div>
     </div>
-</div>
-
-<footer>
-    <h2>¡Gracias por elegirnos!</h2>
-    <p>En Veterinaria La Hacienda, agradecemos que confíe en nuestros servicios profesionales para el cuidado de su mascota.</p>
-</footer>
 
 </body>
 </html>
